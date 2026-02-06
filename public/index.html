@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MP3 Tuber - YouTube to MP3 Converter</title>
+    <meta name="description" content="MP3 Tuber - Convert YouTube links to MP3 for content you own or have permission to download." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-one" aria-hidden="true"></div>
+    <div class="bg-orb orb-two" aria-hidden="true"></div>
+    <div class="bg-orb orb-three" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <span class="logo-mark">MT</span>
+          <span class="logo-text">MP3 Tuber</span>
+        </div>
+        <nav class="nav">
+          <a href="#how">How it works</a>
+          <a href="#faq">FAQ</a>
+          <a href="#footer">Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="pill">Personal-use converter</div>
+            <h1>Turn YouTube links into clean MP3 downloads.</h1>
+            <p>
+              Paste a YouTube URL, confirm you have permission, and get a crisp MP3 ready for download.
+              Fast, simple, and built with modern tools.
+            </p>
+            <div class="trust">
+              <div class="trust-item">
+                <span class="trust-title">High-quality audio</span>
+                <span class="trust-detail">Extracts the best available stream</span>
+              </div>
+              <div class="trust-item">
+                <span class="trust-title">No sign-ups</span>
+                <span class="trust-detail">Convert instantly, no accounts needed</span>
+              </div>
+              <div class="trust-item">
+                <span class="trust-title">Private by design</span>
+                <span class="trust-detail">Automatic cleanup after 1 hour</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="card-header">
+              <h2>Convert a link</h2>
+              <p>Only download content you own or have permission to use.</p>
+            </div>
+
+            <div id="diagnostics" class="diagnostics hidden" role="alert"></div>
+
+            <form id="converter-form" class="converter-form">
+              <label for="youtube-url">YouTube link</label>
+              <div class="input-row">
+                <input
+                  id="youtube-url"
+                  name="youtube-url"
+                  type="url"
+                  placeholder="https://www.youtube.com/watch?v=..."
+                  autocomplete="off"
+                  required
+                />
+                <button type="button" class="ghost" id="paste-btn">Paste</button>
+              </div>
+              <div class="actions-row">
+                <button type="button" class="ghost" id="clear-btn">Clear</button>
+                <button type="submit" class="primary" id="convert-btn">Generate MP3</button>
+              </div>
+              <label class="checkbox">
+                <input type="checkbox" id="rights-check" />
+                <span>I confirm I have the rights to download this content.</span>
+              </label>
+            </form>
+
+            <div class="status" aria-live="polite">
+              <div class="status-header">
+                <span id="status-label">Awaiting link</span>
+                <span id="status-percent">0%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+              </div>
+              <p id="status-text">Paste a link to get started.</p>
+            </div>
+
+            <div class="result hidden" id="result">
+              <div class="result-inner">
+                <div>
+                  <h3>MP3 ready</h3>
+                  <p id="result-meta">Your download is ready.</p>
+                </div>
+                <a id="download-link" class="primary" href="#">Download MP3</a>
+              </div>
+              <button class="ghost" id="copy-link">Copy link</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="info" id="how">
+        <div class="container">
+          <h2>How it works</h2>
+          <div class="steps">
+            <div class="step">
+              <span class="step-number">1</span>
+              <h3>Paste your link</h3>
+              <p>Add a YouTube URL for a video you own or have permission to download.</p>
+            </div>
+            <div class="step">
+              <span class="step-number">2</span>
+              <h3>Convert to MP3</h3>
+              <p>The server extracts the best available audio and converts it to MP3.</p>
+            </div>
+            <div class="step">
+              <span class="step-number">3</span>
+              <h3>Download</h3>
+              <p>Grab the MP3 instantly. Files auto-expire after one hour.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="info muted" id="faq">
+        <div class="container">
+          <h2>FAQ</h2>
+          <div class="faq-grid">
+            <div class="faq-item">
+              <h3>Is it legal to use this?</h3>
+              <p>This tool is intended for personal use with content you own or have permission to download.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Does it support playlists?</h3>
+              <p>No. It converts one video at a time to keep things fast and focused.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Why is a checkbox required?</h3>
+              <p>It confirms you have the rights to download the content and helps protect creators.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>MP3 Tuber</strong>
+          <p>Built for personal use and respectful downloads.</p>
+          <p class="trademark">&trade; HARSH BADHAN</p>
+        </div>
+        <div class="footer-links">
+          <a href="#how">How it works</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

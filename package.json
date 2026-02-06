@@ -1,0 +1,14 @@
+{
+  "name": "mp3-tuber",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MP3 Tuber - A simple web app that converts YouTube links to downloadable MP3s (for content you own or have permission to download).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
